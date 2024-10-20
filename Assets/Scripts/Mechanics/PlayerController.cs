@@ -5,6 +5,7 @@ using Platformer.Gameplay;
 using static Platformer.Core.Simulation;
 using Platformer.Model;
 using Platformer.Core;
+using UnityEngine.UI;
 
 namespace Platformer.Mechanics
 {
@@ -39,6 +40,11 @@ namespace Platformer.Mechanics
         SpriteRenderer spriteRenderer;
         internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
+        
+        // Reference to the Slider for the gauge
+        public Slider gaugeSlider;
+        public float maxGauge = 100f; // Maximum value for the gauge
+        private float _currentGauge;
 
         public Bounds Bounds => collider2d.bounds;
 
@@ -49,6 +55,10 @@ namespace Platformer.Mechanics
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
+            
+            // Initialize gauge values
+            _currentGauge = maxGauge / 2; // Start with half the gauge filled
+            UpdateGaugeUI();
         }
 
         protected override void Update()
@@ -127,6 +137,30 @@ namespace Platformer.Mechanics
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
             targetVelocity = move * maxSpeed;
+        }
+        
+        public void RefillGauge(float amount)
+        {
+            _currentGauge += amount;
+            _currentGauge = Mathf.Clamp(_currentGauge, 0, maxGauge); // Ensure the gauge doesn't exceed the max value
+            UpdateGaugeUI();
+        }
+
+        void UpdateGaugeUI()
+        {
+            if (gaugeSlider != null)
+            {
+                gaugeSlider.value = _currentGauge / maxGauge;
+            }
+        }
+        
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Refill"))
+            {
+                RefillGauge(25f); // Refills gauge by 25 units (can be any amount you prefer)
+                Destroy(other.gameObject); // Remove the power-up after collecting it
+            }
         }
 
         public enum JumpState
