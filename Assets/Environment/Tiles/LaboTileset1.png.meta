@@ -1,0 +1,2226 @@
+fileFormatVersion: 2
+guid: 626c8be798443984aacf5af3395a038d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 350
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LaboTileset1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47601fc9b1b8256499a7488188cc7ccc
+      internalID: 373012842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc064430c64371468a2b3eb087de86d
+      internalID: 1613933586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1132afb20007f4c96921ed9722fa1f
+      internalID: -977651181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471707233e23b2c41b7d317963e700fc
+      internalID: 1979106644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d43affdfc521348852ab0878df8e74
+      internalID: 1440499895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52a87965f6ba8a41af4b3554e1bdbdd
+      internalID: -50495312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_6
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6dde4187635664faacfd10cd21870b
+      internalID: -1121210013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_7
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c7d904f71dd1f4aa183426c3c0eb78
+      internalID: -1681820948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_8
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266404478c596f34ca330ad689a91e63
+      internalID: 1954835062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_9
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064ed72f4a436474b91ffe6ba9f3bea6
+      internalID: -1673299655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ebd73084d445974ea3d02c2b8e976e8
+      internalID: -1404570999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_11
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1008
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1706426b25da59e4ab9b776d6be342e1
+      internalID: 863829747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa167afd568dd954e9ee4beb9a18323a
+      internalID: 1495554105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_13
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90afbe1a40d7cb345a48e68eb96124b6
+      internalID: -172039517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_14
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7c666058f0e954280468d360d532fe
+      internalID: -1621116520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_15
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a723f1d0cee4e884e9f24148ded93b1d
+      internalID: -2135632619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_16
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefa83ad52d282643b48b518949bbdf4
+      internalID: -1553370736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72676475016584e49998925d3669b7da
+      internalID: 300329117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_18
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b28c52d09ef9d746bee3e7085b3ac03
+      internalID: 361096711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_19
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80492eb0e09a4d9459c525235b9b6328
+      internalID: -2093953718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_20
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b7b97e0866a2544bb00e3c5a808875
+      internalID: 1223222862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_21
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ec3721536399b479f2a86d34dbf807
+      internalID: 2091602685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_22
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d75d75bc49add4388ee1fcfb6b68f3
+      internalID: 2076311059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_23
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 864
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076721864ba357841825e70321d0a6bf
+      internalID: -11560797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111bc5a342a8a0a488e3e77b795083fb
+      internalID: 1501643358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_25
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c083442184a7d764498659b0da29e088
+      internalID: 1200897725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9634f11818bec7b4bae7e74c3b0edf86
+      internalID: -1781502960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_27
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b1c211097a1294782ebd38b4bbb8d9
+      internalID: 1835012458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_28
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474c179a24e566b45972471b952c56e5
+      internalID: -673918874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_29
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf3fd62195a748479814a454fa08e1c
+      internalID: 993906205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_30
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97689b5072f5a784b89abf13092f5733
+      internalID: 1699488461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_31
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fb8c4f578573e46a024354270127ff
+      internalID: 179647861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_32
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506d137f43d36ed4e94a6c7a0739c7b8
+      internalID: -1127054253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_33
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da968f9d9bee0b4982311e2d09febfa
+      internalID: -813682526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_34
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e525471feaa72a441819a9b8dfbc4b51
+      internalID: 687137096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_35
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 720
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb667c3a3138f74e9a8199eb5b7b83d
+      internalID: 1978970228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d231829a100bf40a02482ec9811fac
+      internalID: 1158044959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_37
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b766d3d9d3a8a354587bb4a71bcb3c92
+      internalID: -843264862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_38
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710a9e8c811ebeb4b806271ce5db4873
+      internalID: -2080001230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_39
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ff837eb7c28464480016cca568c91a
+      internalID: -962983140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_40
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c9ffbd64245c64a89c707fce26e555
+      internalID: -1681716200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_41
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f49f2fd6e1c917458dfb52608473f0b
+      internalID: -1831976420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_42
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15802677df19af34b83ec672b9cb6bb4
+      internalID: -446973836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_43
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f03fae063cfd64a99265fabf032ce8
+      internalID: -12503887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_44
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe834c4450a63004aa658f7842022a26
+      internalID: -1890903344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_45
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0309cd1ab3b296a49b28b306b01662ee
+      internalID: -975653515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_46
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b355fa19e4845c543b7b76db1d01ede5
+      internalID: 120344615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_47
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfcb2f6e84d1dc944aca0de4618843b8
+      internalID: 1369593798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678d0f28d0dfc804b972b4445592b2eb
+      internalID: -841091959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_49
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3080d371e7288884ea9f71f2a53ecb20
+      internalID: -963758347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_50
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbd87738e229d142813577f333d9bcb
+      internalID: 1124358627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_51
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e13f007cbfac0b459bd443846911d73
+      internalID: 1701631291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_52
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fe23ca3eeefef4bad497df78a3e467
+      internalID: -2082078246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_53
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbf5be19d62e9e4db4396c29257b147
+      internalID: 371201919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_54
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbde409e70da18140aadd6adf20dd91b
+      internalID: 1866546892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_55
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cceaa01317d11499233c8fb5cae6bb
+      internalID: 1719521452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_56
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51c5326c6eeeae4c827686806b54fc0
+      internalID: -286710084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_57
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8773cd8b7239343a0c7fc147debc77
+      internalID: -1678885122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_58
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4067a5661a27bb64d952a4c0957ef557
+      internalID: 1747353157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_59
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 432
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d700f9f2de35eb44aeae1a9d9931178
+      internalID: 1845821457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a9ba911188682409745f6466b36195
+      internalID: -1265095862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_61
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08133b9986f91a8479784e70c74a007a
+      internalID: -1499679953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_62
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5482e9101357a54d98bbf5b7919c16d
+      internalID: 1894213029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_63
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d405e3e423223d4b9311eb8dc3184e5
+      internalID: 974661681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_64
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d14d7502e73eb4fac0a810018d381f
+      internalID: 2107279724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_65
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aded6e51e34a6624bb24758bd5da06d9
+      internalID: -67824122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_66
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0601a6e1b71d1b64f94f3470941bbb89
+      internalID: 973556617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_67
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9bd941b834e564aaec5fc787e704dc
+      internalID: 1070114807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_68
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31aa17b658e3afb4b99e339c06918e4e
+      internalID: -1380035459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_69
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b250a46430864b46b53d5b6a161cf78
+      internalID: -1026091225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_70
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb740cb1cb60943478372c870803aaf5
+      internalID: -1782871343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_71
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 288
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16aedf920c81ca44bae7893058557c4
+      internalID: -1694955030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9799795402af24a4b86c8ed4d7846544
+      internalID: -1242919105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_73
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa87f4542d03f549aac490d31da1d1d
+      internalID: -766228199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_74
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c328f2c8c45d96f47a2c68269fde4752
+      internalID: 1841288386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_75
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4d3e0db5df80246a5d17944649315a
+      internalID: 1035854446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_76
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd4d21f2823d054a89504be8e3841a6
+      internalID: -1587428966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_77
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb7ef8c88d6b594d8e0c73f7b7c9260
+      internalID: -1963347912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_78
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0332083e204f35448c2fe6105521ee7
+      internalID: -323562427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_79
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcf28af16492de4d9c75fc8824fa233
+      internalID: -731949003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_80
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c148a69e31a6e5b4e879d2a6c69596f0
+      internalID: 546988725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_81
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad967883b6082dc4eb3e6e92ea67e48f
+      internalID: -806646671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_82
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d9179d5d6077b4fb082f2dc1f827e6
+      internalID: -1441324824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_83
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 144
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e652d0e6d0eac147bcae1327c747863
+      internalID: -961575273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9b1931a4d9d554b8bd2700df9c8c02
+      internalID: -1890521807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_85
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bc3527c3e7bd449aa557ecf790e506
+      internalID: 1471373227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_86
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6e7f70fe5bead40a76ec90b9b33f06
+      internalID: 437055786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_87
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e15398156f1804b96b324c618c83c5
+      internalID: -1169432727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_88
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5372dd8b409e8424a82c76aa614f4da4
+      internalID: -1359724055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_89
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf227db719c7244cbfdbf36139232ff
+      internalID: -134761589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_90
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334c4161fe625ba408cd4bae7640bfc2
+      internalID: -1822393761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_91
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b61933ef4331a4ea0852c1c688592a
+      internalID: -1606298806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_92
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4e27398f23aba4091b73f81ec1af9f
+      internalID: -1977710796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_93
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b205f72045036724ead4936e62e1fa64
+      internalID: 1755739387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_94
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e556dc962bfc64d855271d24fa0980
+      internalID: 876251970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaboTileset1_95
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f2f1acbe630e34fa12c42668f8316f
+      internalID: -1026420250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LaboTileset1_0: 373012842
+      LaboTileset1_1: 1613933586
+      LaboTileset1_10: -1404570999
+      LaboTileset1_11: 863829747
+      LaboTileset1_12: 1495554105
+      LaboTileset1_13: -172039517
+      LaboTileset1_14: -1621116520
+      LaboTileset1_15: -2135632619
+      LaboTileset1_16: -1553370736
+      LaboTileset1_17: 300329117
+      LaboTileset1_18: 361096711
+      LaboTileset1_19: -2093953718
+      LaboTileset1_2: -977651181
+      LaboTileset1_20: 1223222862
+      LaboTileset1_21: 2091602685
+      LaboTileset1_22: 2076311059
+      LaboTileset1_23: -11560797
+      LaboTileset1_24: 1501643358
+      LaboTileset1_25: 1200897725
+      LaboTileset1_26: -1781502960
+      LaboTileset1_27: 1835012458
+      LaboTileset1_28: -673918874
+      LaboTileset1_29: 993906205
+      LaboTileset1_3: 1979106644
+      LaboTileset1_30: 1699488461
+      LaboTileset1_31: 179647861
+      LaboTileset1_32: -1127054253
+      LaboTileset1_33: -813682526
+      LaboTileset1_34: 687137096
+      LaboTileset1_35: 1978970228
+      LaboTileset1_36: 1158044959
+      LaboTileset1_37: -843264862
+      LaboTileset1_38: -2080001230
+      LaboTileset1_39: -962983140
+      LaboTileset1_4: 1440499895
+      LaboTileset1_40: -1681716200
+      LaboTileset1_41: -1831976420
+      LaboTileset1_42: -446973836
+      LaboTileset1_43: -12503887
+      LaboTileset1_44: -1890903344
+      LaboTileset1_45: -975653515
+      LaboTileset1_46: 120344615
+      LaboTileset1_47: 1369593798
+      LaboTileset1_48: -841091959
+      LaboTileset1_49: -963758347
+      LaboTileset1_5: -50495312
+      LaboTileset1_50: 1124358627
+      LaboTileset1_51: 1701631291
+      LaboTileset1_52: -2082078246
+      LaboTileset1_53: 371201919
+      LaboTileset1_54: 1866546892
+      LaboTileset1_55: 1719521452
+      LaboTileset1_56: -286710084
+      LaboTileset1_57: -1678885122
+      LaboTileset1_58: 1747353157
+      LaboTileset1_59: 1845821457
+      LaboTileset1_6: -1121210013
+      LaboTileset1_60: -1265095862
+      LaboTileset1_61: -1499679953
+      LaboTileset1_62: 1894213029
+      LaboTileset1_63: 974661681
+      LaboTileset1_64: 2107279724
+      LaboTileset1_65: -67824122
+      LaboTileset1_66: 973556617
+      LaboTileset1_67: 1070114807
+      LaboTileset1_68: -1380035459
+      LaboTileset1_69: -1026091225
+      LaboTileset1_7: -1681820948
+      LaboTileset1_70: -1782871343
+      LaboTileset1_71: -1694955030
+      LaboTileset1_72: -1242919105
+      LaboTileset1_73: -766228199
+      LaboTileset1_74: 1841288386
+      LaboTileset1_75: 1035854446
+      LaboTileset1_76: -1587428966
+      LaboTileset1_77: -1963347912
+      LaboTileset1_78: -323562427
+      LaboTileset1_79: -731949003
+      LaboTileset1_8: 1954835062
+      LaboTileset1_80: 546988725
+      LaboTileset1_81: -806646671
+      LaboTileset1_82: -1441324824
+      LaboTileset1_83: -961575273
+      LaboTileset1_84: -1890521807
+      LaboTileset1_85: 1471373227
+      LaboTileset1_86: 437055786
+      LaboTileset1_87: -1169432727
+      LaboTileset1_88: -1359724055
+      LaboTileset1_89: -134761589
+      LaboTileset1_9: -1673299655
+      LaboTileset1_90: -1822393761
+      LaboTileset1_91: -1606298806
+      LaboTileset1_92: -1977710796
+      LaboTileset1_93: 1755739387
+      LaboTileset1_94: 876251970
+      LaboTileset1_95: -1026420250
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
