@@ -139,7 +139,7 @@ namespace Platformer.Mechanics
             targetVelocity = move * maxSpeed;
         }
         
-        public void RefillGauge(float amount)
+        public void DeltaGauge(float amount)
         {
             _currentGauge += amount;
             _currentGauge = Mathf.Clamp(_currentGauge, 0, maxGauge); // Ensure the gauge doesn't exceed the max value
@@ -158,7 +158,7 @@ namespace Platformer.Mechanics
         {
             if (other.gameObject.CompareTag("Refill"))
             {
-                RefillGauge(25f); // Refills gauge by 25 units (can be any amount you prefer)
+                DeltaGauge(25f); // Refills gauge by 25 units (can be any amount you prefer)
                 Destroy(other.gameObject); // Remove the power-up after collecting it
             }
         }
@@ -170,6 +170,11 @@ namespace Platformer.Mechanics
             Jumping,
             InFlight,
             Landed
+        }
+
+        public float getCurrentGauge()
+        {
+            return _currentGauge;
         }
     }
 }

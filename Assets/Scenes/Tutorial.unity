@@ -6039,6 +6039,11 @@ PrefabInstance:
       propertyPath: gaugeSlider
       value: 
       objectReference: {fileID: 32003561}
+    - target: {fileID: 7275671782717146686, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 838423048}
     - target: {fileID: 8509783501685719824, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       propertyPath: OutputAudioMixerGroup
