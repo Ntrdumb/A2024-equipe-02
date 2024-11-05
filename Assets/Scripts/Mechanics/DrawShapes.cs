@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Platformer.Mechanics;
 using UnityEngine;
 
 public class DrawShapes : MonoBehaviour
@@ -10,16 +11,18 @@ public class DrawShapes : MonoBehaviour
 
     private GameObject shapeObject;
 
+    public PlayerController playerController;
+
     void Update()
     {
         // Mouse down
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && playerController.getCurrentGauge() > 0)
         {
             CreateNewLine();
         }
 
         // Mouse hold
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && playerController.getCurrentGauge() > 0)
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             AddPointToLine(mousePos);
@@ -61,6 +64,11 @@ public class DrawShapes : MonoBehaviour
     {
         if (points.Count == 0 || Vector2.Distance(points[points.Count - 1], newPoint) > 0.1f)
         {
+            if (points.Count > 1)
+            {
+                playerController.DeltaGauge(-Vector2.Distance(points[points.Count - 1], newPoint));
+            }
+
             points.Add(newPoint);
             currentLineRenderer.positionCount = points.Count;
             currentLineRenderer.SetPosition(points.Count - 1, newPoint);
