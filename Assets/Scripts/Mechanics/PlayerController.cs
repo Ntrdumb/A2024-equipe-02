@@ -158,7 +158,7 @@ namespace Platformer.Mechanics
         {
             if (other.gameObject.CompareTag("Refill"))
             {
-                DeltaGauge(25f); // Refills gauge by 25 units (can be any amount you prefer)
+                DeltaGauge(25f); // Refills gauge by 25 units 
                 Destroy(other.gameObject); // Remove the power-up after collecting it
             }
         }

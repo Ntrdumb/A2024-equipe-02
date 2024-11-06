@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Platformer.UI
 {
@@ -19,6 +20,11 @@ namespace Platformer.UI
                 var g = panels[i];
                 if (g.activeSelf != active) g.SetActive(active);
             }
+        }
+
+        public void restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         void OnEnable()

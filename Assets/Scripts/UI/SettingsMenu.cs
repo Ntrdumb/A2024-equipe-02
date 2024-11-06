@@ -14,31 +14,40 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Toggle fullScreenToggle;
 
+
+
+    
     private void Start()
     {
         resolutions = Screen.resolutions;
-        
-        resolutionDropdown.ClearOptions();
-        List<string> options = new List<string>();
 
-        int currentResolutionIndex = 0;
+        // Préparer les options de résolution
+        List<string> options = new List<string>();
+        int currentResolutionIndex = PlayerPrefs.HasKey("resolutionIndex") ? PlayerPrefs.GetInt("resolutionIndex") : 0;
+
         for (int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + " x " + resolutions[i].height;
             options.Add(option);
 
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            // Trouver l'index correspondant à la résolution de l'écran si aucune préférence n'est enregistrée
+            if (!PlayerPrefs.HasKey("resolutionIndex") &&
+                resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
                 currentResolutionIndex = i;
             }
         }
+
+        // Mettre à jour le dropdown
+        resolutionDropdown.ClearOptions();
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-        
-        //Si le joueur a changé la musique auparavant
-        if (PlayerPrefs.HasKey("musicVolume") || PlayerPrefs.HasKey("sfxVolume") || PlayerPrefs.HasKey("masterVolume"))
+        //Si le joueur a des playerprefs
+        if (PlayerPrefs.HasKey("musicVolume") || PlayerPrefs.HasKey("sfxVolume") || PlayerPrefs.HasKey("masterVolume") 
+            || PlayerPrefs.HasKey("isFullScreen"))
         {
             LoadPlayerPref();
         }
@@ -46,6 +55,7 @@ public class SettingsMenu : MonoBehaviour
             SetVolume();
             SetMusicVolume();
             SetSFfxVolume();
+            SetResolution(currentResolutionIndex); 
         }
     }
 
@@ -78,6 +88,7 @@ public class SettingsMenu : MonoBehaviour
     
     public void SetFullScreen (bool isFullScreen)
     {
+        fullScreenToggle.isOn = isFullScreen;
         Screen.fullScreen = isFullScreen;
     }
 
@@ -89,6 +100,14 @@ public class SettingsMenu : MonoBehaviour
         SetVolume();        
         SetMusicVolume();
         SetSFfxVolume();
+        
+        // Charger la résolution et le mode plein écran
+        int width = PlayerPrefs.GetInt("resolutionWidth");
+        int height = PlayerPrefs.GetInt("resolutionHeight");
+        Screen.SetResolution(width, height, Screen.fullScreen);
+
+        bool isFullScreen = PlayerPrefs.GetInt("isFullScreen") == 1;
+        SetFullScreen(isFullScreen);
     }
 
 }
