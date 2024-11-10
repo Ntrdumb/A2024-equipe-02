@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TutorialRequirement
   - Refill
+  - DrawnShape
   layers:
   - Default
   - TransparentFX

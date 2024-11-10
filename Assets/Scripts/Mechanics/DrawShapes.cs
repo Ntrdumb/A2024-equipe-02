@@ -110,4 +110,16 @@ public class DrawShapes : MonoBehaviour
             currentLineRenderer.SetPosition(i, worldPoint);
         }
     }
+
+    public void ClearDrawnShapes()
+    {
+        // Find all objects tagged as "DrawnShape"
+        GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
+
+        // Loop through and destroy each one
+        foreach (GameObject shape in drawnShapes)
+        {
+            Destroy(shape);
+        }
+    }
 }
