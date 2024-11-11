@@ -18,6 +18,7 @@ namespace Platformer.Mechanics
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
+        public AudioClip refillAudio;
 
         /// <summary>
         /// Max horizontal speed of the player.
@@ -159,6 +160,7 @@ namespace Platformer.Mechanics
             if (other.gameObject.CompareTag("Refill"))
             {
                 DeltaGauge(25f); // Refills gauge by 25 units 
+                audioSource.PlayOneShot(refillAudio);
                 Destroy(other.gameObject); // Remove the power-up after collecting it
             }
         }
