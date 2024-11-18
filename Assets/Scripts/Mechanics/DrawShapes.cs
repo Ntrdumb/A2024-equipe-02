@@ -66,7 +66,7 @@ public class DrawShapes : MonoBehaviour
         {
             if (points.Count > 1)
             {
-                playerController.DeltaGauge(-Vector2.Distance(points[points.Count - 1] * 1.2f, newPoint));
+                playerController.DeltaGauge(-Vector2.Distance(points[points.Count - 1] * 1.005f, newPoint));
             }
 
             points.Add(newPoint);
