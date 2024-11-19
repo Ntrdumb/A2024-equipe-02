@@ -1,6 +1,9 @@
+using System.Collections;
 using Platformer.Core;
 using Platformer.Mechanics;
 using Platformer.Model;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Platformer.Gameplay
 {
@@ -19,6 +22,13 @@ namespace Platformer.Gameplay
         {
             model.player.animator.SetTrigger("victory");
             model.player.controlEnabled = false;
+            model.player.StartCoroutine(BackToMenu(5));
+        }
+
+        IEnumerator BackToMenu(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }
