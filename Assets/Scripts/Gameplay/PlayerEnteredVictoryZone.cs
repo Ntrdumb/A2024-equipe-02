@@ -22,7 +22,7 @@ namespace Platformer.Gameplay
         {
             model.player.animator.SetTrigger("victory");
             model.player.controlEnabled = false;
-            model.player.StartCoroutine(BackToMenu(5));
+            //model.player.StartCoroutine(BackToMenu(5));
         }
 
         IEnumerator BackToMenu(float delay)

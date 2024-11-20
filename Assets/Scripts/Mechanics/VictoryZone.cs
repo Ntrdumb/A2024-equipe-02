@@ -9,6 +9,17 @@ namespace Platformer.Mechanics
     /// </summary>
     public class VictoryZone : MonoBehaviour
     {
+        [SerializeField] private Canvas victoryCanvas; // Référence au Canvas à afficher
+
+        void Start()
+        {
+            if (victoryCanvas != null)
+            {
+                // Assurez-vous que le Canvas est désactivé au départ
+                victoryCanvas.gameObject.SetActive(false);
+            }
+        }
+
         void OnTriggerEnter2D(Collider2D collider)
         {
             var p = collider.gameObject.GetComponent<PlayerController>();
@@ -16,6 +27,12 @@ namespace Platformer.Mechanics
             {
                 var ev = Schedule<PlayerEnteredVictoryZone>();
                 ev.victoryZone = this;
+
+                // Affiche le Canvas de victoire
+                if (victoryCanvas != null)
+                {
+                    victoryCanvas.gameObject.SetActive(true);
+                }
             }
         }
     }
