@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Platformer.Core;
+using Platformer.Gameplay;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +32,11 @@ namespace Platformer.UI
         void OnEnable()
         {
             SetActivePanel(0);
+        }
+
+        public void lastCheckpoint()
+        {
+            Simulation.Schedule<PlayerDeath>();
         }
     }
 }

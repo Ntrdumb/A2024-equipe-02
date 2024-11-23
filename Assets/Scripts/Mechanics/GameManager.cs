@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            if (drawShapes == null)
+            {
+                drawShapes = GetComponent<DrawShapes>();
+            }
         }
         else
         {

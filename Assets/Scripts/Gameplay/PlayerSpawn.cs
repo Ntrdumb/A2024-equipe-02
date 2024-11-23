@@ -19,11 +19,10 @@ namespace Platformer.Gameplay
             // Clear drawn shapes upon respawn
             if (GameManager.Instance.drawShapes != null)
             {
-                Debug.Log("Clearing");
                 GameManager.Instance.drawShapes.ClearDrawnShapes();
             }
 
-            // Enable the player’s collider and disable control momentarily
+            // Enable the player's collider and disable control momentarily
             player.collider2d.enabled = true;
             player.controlEnabled = false;
 
