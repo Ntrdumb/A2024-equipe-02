@@ -15,20 +15,20 @@ public class DrawShapes : MonoBehaviour
 
     void Update()
     {
-        // Mouse down
+        // Mouse down to start drawing
         if (Input.GetMouseButtonDown(0) && playerController.getCurrentGauge() > 0)
         {
             CreateNewLine();
         }
 
-        // Mouse hold
+        // Mouse hold to draw
         if (Input.GetMouseButton(0) && playerController.getCurrentGauge() > 0)
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             AddPointToLine(mousePos);
         }
 
-        // Mouse up
+        // Mouse up to finish drawing
         if (Input.GetMouseButtonUp(0))
         {
             if (points.Count > 2)
@@ -37,10 +37,23 @@ public class DrawShapes : MonoBehaviour
             }
         }
 
-        // Update LineRenderer to follow the movement of the shape due to physics
-        if (shapeObject != null && currentLineRenderer != null)
+        // Right-click to erase part of the shape
+        if (Input.GetMouseButton(1))
         {
-            UpdateLineRendererPosition();
+            ErasePartOfShape();
+        }
+
+        // Update LineRenderer positions for all DrawnShape objects
+        GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
+        foreach (GameObject shape in drawnShapes)
+        {
+            LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
+            EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
+
+            if (lineRenderer != null && edgeCollider != null)
+            {
+                UpdateLineRendererPosition(shape, lineRenderer, edgeCollider);
+            }
         }
     }
 
@@ -79,15 +92,15 @@ public class DrawShapes : MonoBehaviour
     void CreateEdgeCollider()
     {
         EdgeCollider2D edgeCollider = shapeObject.AddComponent<EdgeCollider2D>();
-        edgeCollider.points = points.ToArray(); 
+        edgeCollider.points = points.ToArray();
 
         // Add Rigidbody2D 
         Rigidbody2D rb = shapeObject.AddComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Dynamic;  
-        rb.gravityScale = 1;  
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.gravityScale = 1;
 
         Vector2 center = CalculateCenterOfMass(points);
-        rb.centerOfMass = center; 
+        rb.centerOfMass = center;
     }
 
     // Calculate the center of mass of the shape for stability
@@ -102,24 +115,166 @@ public class DrawShapes : MonoBehaviour
     }
 
     // Update LineRenderer's positions to match the object's movement
-    void UpdateLineRendererPosition()
+    void UpdateLineRendererPosition(GameObject shape, LineRenderer lineRenderer, EdgeCollider2D edgeCollider)
     {
-        for (int i = 0; i < points.Count; i++)
+        // Get the EdgeCollider2D points
+        Vector2[] colliderPoints = edgeCollider.points;
+
+        // Update the LineRenderer positions to match the collider points in world space
+        for (int i = 0; i < colliderPoints.Length; i++)
         {
-            Vector2 worldPoint = shapeObject.transform.TransformPoint(points[i]);
-            currentLineRenderer.SetPosition(i, worldPoint);
+            Vector3 worldPoint = shape.transform.TransformPoint(colliderPoints[i]);
+            lineRenderer.SetPosition(i, worldPoint);
         }
     }
 
     public void ClearDrawnShapes()
     {
-        // Find all objects tagged as "DrawnShape"
         GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
 
-        // Loop through and destroy each one
         foreach (GameObject shape in drawnShapes)
         {
             Destroy(shape);
         }
     }
+
+    bool IsMouseOverShape(Vector2 mousePos, GameObject shape, EdgeCollider2D edgeCollider)
+    {
+        // Check if the mouse is near any of the collider's points
+        Vector2[] localPoints = edgeCollider.points;
+        foreach (Vector2 localPoint in localPoints)
+        {
+            Vector2 worldPoint = shape.transform.TransformPoint(localPoint);
+            if (Vector2.Distance(mousePos, worldPoint) <= 0.2f) // Threshold for interaction
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    void HandleLineSplitting(GameObject originalShape, List<List<Vector2>> segments, Rigidbody2D originalRb)
+    {
+        // Store the original shape's transform data
+        Vector3 originalPosition = originalShape.transform.position;
+        Quaternion originalRotation = originalShape.transform.rotation;
+        Vector3 originalScale = originalShape.transform.localScale;
+
+        // Store original velocity data
+        Vector2 originalVelocity = originalRb.velocity;
+        float originalAngularVelocity = originalRb.angularVelocity;
+
+        Destroy(originalShape);
+
+        foreach (List<Vector2> segment in segments)
+        {
+            if (segment.Count < 2) continue;
+
+            GameObject newShape = new GameObject("DrawnShape");
+            newShape.tag = "DrawnShape";
+
+            // Set the transform to match the original shape
+            newShape.transform.position = originalPosition;
+            newShape.transform.rotation = originalRotation;
+            newShape.transform.localScale = originalScale;
+
+            // Add LineRenderer
+            LineRenderer newLineRenderer = newShape.AddComponent<LineRenderer>();
+            newLineRenderer.positionCount = segment.Count;
+            newLineRenderer.startWidth = 0.1f;
+            newLineRenderer.endWidth = 0.1f;
+            newLineRenderer.material = lineMaterial;
+
+            // Add EdgeCollider2D with points in local space
+            EdgeCollider2D newEdgeCollider = newShape.AddComponent<EdgeCollider2D>();
+            newEdgeCollider.points = segment.ToArray();
+
+            // Add Rigidbody2D and preserve physics state
+            Rigidbody2D newRb = newShape.AddComponent<Rigidbody2D>();
+            newRb.bodyType = RigidbodyType2D.Dynamic;
+            newRb.gravityScale = originalRb.gravityScale;
+            newRb.mass = originalRb.mass;
+            newRb.drag = originalRb.drag;
+            newRb.angularDrag = originalRb.angularDrag;
+            newRb.collisionDetectionMode = originalRb.collisionDetectionMode;
+
+            // Apply the original velocities
+            newRb.velocity = originalVelocity;
+            newRb.angularVelocity = originalAngularVelocity;
+
+            // Calculate and set the center of mass in local space
+            Vector2 centerOfMass = CalculateCenterOfMass(segment);
+            newRb.centerOfMass = centerOfMass;
+
+            // Update the visual representation
+            SynchronizeShape(newShape, newLineRenderer, newEdgeCollider);
+        }
+    }
+
+    void SynchronizeShape(GameObject shape, LineRenderer lineRenderer, EdgeCollider2D edgeCollider)
+    {
+        Vector2[] colliderPoints = edgeCollider.points;
+        lineRenderer.positionCount = colliderPoints.Length;
+
+        for (int i = 0; i < colliderPoints.Length; i++)
+        {
+            // Convert local collider points to world space for the LineRenderer
+            Vector3 worldPoint = shape.transform.TransformPoint(colliderPoints[i]);
+            lineRenderer.SetPosition(i, worldPoint);
+        }
+    }
+
+    void ErasePartOfShape()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
+
+        foreach (GameObject shape in drawnShapes)
+        {
+            LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
+            EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
+            Rigidbody2D rb = shape.GetComponent<Rigidbody2D>();
+
+            if (lineRenderer != null && edgeCollider != null && IsMouseOverShape(mousePos, shape, edgeCollider))
+            {
+                // Get points in local space
+                Vector2[] localPoints = edgeCollider.points;
+                List<List<Vector2>> newSegments = new List<List<Vector2>>();
+                List<Vector2> currentSegment = new List<Vector2>();
+
+                foreach (Vector2 localPoint in localPoints)
+                {
+                    // Convert point to world space for distance check
+                    Vector2 worldPoint = shape.transform.TransformPoint(localPoint);
+
+                    if (Vector2.Distance(mousePos, worldPoint) > 0.2f)
+                    {
+                        // Keep points in local space for the new segments
+                        currentSegment.Add(localPoint);
+                    }
+                    else if (currentSegment.Count > 0)
+                    {
+                        newSegments.Add(new List<Vector2>(currentSegment));
+                        currentSegment.Clear();
+                    }
+                }
+
+                if (currentSegment.Count > 0)
+                {
+                    newSegments.Add(currentSegment);
+                }
+
+                if (newSegments.Count == 0)
+                {
+                    Destroy(shape);
+                }
+                else
+                {
+                    HandleLineSplitting(shape, newSegments, rb);
+                }
+            }
+        }
+    }
+
 }
