@@ -841,7 +841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Left               A
+  m_text: 'Left              A
 
     Right             D
 
@@ -852,7 +852,7 @@ MonoBehaviour:
 
     Draw            Left Click
 
-    Pause          Esc
+    Erase           Right Click
 
 
 
@@ -2922,6 +2922,7 @@ MonoBehaviour:
   masterSlider: {fileID: 6863874564550317176}
   musicSlider: {fileID: 700271293780790817}
   sfxSlider: {fileID: 1331113267160363119}
+  fullScreenToggle: {fileID: 0}
 --- !u!1 &8823764179491473422
 GameObject:
   m_ObjectHideFlags: 0

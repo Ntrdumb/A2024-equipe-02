@@ -12,6 +12,8 @@ public class DrawShapes : MonoBehaviour
     private GameObject shapeObject;
 
     public PlayerController playerController;
+    [SerializeField] Texture2D mouseDrawIcon;
+    [SerializeField] Texture2D mouseEraseIcon;
 
     void Update()
     {
@@ -19,6 +21,7 @@ public class DrawShapes : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && playerController.getCurrentGauge() > 0)
         {
             CreateNewLine();
+            Cursor.SetCursor(mouseDrawIcon, Vector2.zero, CursorMode.Auto);
         }
 
         // Mouse hold to draw
@@ -41,6 +44,7 @@ public class DrawShapes : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             ErasePartOfShape();
+            Cursor.SetCursor(mouseEraseIcon, Vector2.zero, CursorMode.Auto);
         }
 
         // Update LineRenderer positions for all DrawnShape objects
