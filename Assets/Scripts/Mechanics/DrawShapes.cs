@@ -5,59 +5,117 @@ using UnityEngine;
 
 public class DrawShapes : MonoBehaviour
 {
+    private bool isDrawingMode = false;
     private LineRenderer currentLineRenderer;
     private List<Vector2> points = new List<Vector2>();
     public Material lineMaterial;
+    public UnityEngine.UI.Image drawingModeIndicator;
+    public Sprite drawingModeOnImage;
+    public Sprite drawingModeOffImage;
 
     private GameObject shapeObject;
 
     public PlayerController playerController;
     [SerializeField] Texture2D mouseDrawIcon;
     [SerializeField] Texture2D mouseEraseIcon;
+    
+    [SerializeField] private float maxDrawingRange = 3.0f;
+    [SerializeField] private LineRenderer rangeIndicator; 
+    private Vector2 drawingStartPosition;
 
+
+    void Start()
+    {
+        if (rangeIndicator != null)
+        {
+            // Configure the circle
+            rangeIndicator.startWidth = 0.05f;
+            rangeIndicator.endWidth = 0.05f;
+            DrawCircle(rangeIndicator, maxDrawingRange);
+            rangeIndicator.gameObject.SetActive(false); // Hide the circle initially
+        }
+    }
+    
     void Update()
     {
-        // Mouse down to start drawing
-        if (Input.GetMouseButtonDown(0) && playerController.getCurrentGauge() > 0)
+        // Toggle drawing mode with Shift key
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
-            CreateNewLine();
-            Cursor.SetCursor(mouseDrawIcon, Vector2.zero, CursorMode.Auto);
-        }
-
-        // Mouse hold to draw
-        if (Input.GetMouseButton(0) && playerController.getCurrentGauge() > 0)
-        {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            AddPointToLine(mousePos);
-        }
-
-        // Mouse up to finish drawing
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (points.Count > 2)
+            isDrawingMode = !isDrawingMode;
+            UpdateDrawingModeUI();
+            
+            // Enable or disable player movement
+            playerController.controlEnabled = !isDrawingMode;
+            
+            // Show or hide the circle range
+            if (rangeIndicator != null)
             {
-                CreateEdgeCollider();
+                rangeIndicator.gameObject.SetActive(isDrawingMode);
             }
         }
 
-        // Right-click to erase part of the shape
-        if (Input.GetMouseButton(1))
+        if (isDrawingMode)
         {
-            ErasePartOfShape();
-            Cursor.SetCursor(mouseEraseIcon, Vector2.zero, CursorMode.Auto);
-        }
-
-        // Update LineRenderer positions for all DrawnShape objects
-        GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
-        foreach (GameObject shape in drawnShapes)
-        {
-            LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
-            EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
-
-            if (lineRenderer != null && edgeCollider != null)
+            // Mouse down to start drawing
+            if (Input.GetMouseButtonDown(0) && playerController.getCurrentGauge() > 0)
             {
-                UpdateLineRendererPosition(shape, lineRenderer, edgeCollider);
+                CreateNewLine();
+                Cursor.SetCursor(mouseDrawIcon, Vector2.zero, CursorMode.Auto);
             }
+
+            // Mouse hold to draw
+            if (Input.GetMouseButton(0) && playerController.getCurrentGauge() > 0)
+            {
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                AddPointToLine(mousePos);
+            }
+
+            // Mouse up to finish drawing
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (points.Count > 2)
+                {
+                    CreateEdgeCollider();
+                }
+            }
+
+            // Right-click to erase part of the shape
+            if (Input.GetMouseButton(1))
+            {
+                ErasePartOfShape();
+                Cursor.SetCursor(mouseEraseIcon, Vector2.zero, CursorMode.Auto);
+            }
+
+            // Update LineRenderer positions for all DrawnShape objects
+            GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
+            foreach (GameObject shape in drawnShapes)
+            {
+                LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
+                EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
+
+                if (lineRenderer != null && edgeCollider != null)
+                {
+                    UpdateLineRendererPosition(shape, lineRenderer, edgeCollider);
+                }
+            }
+        }
+    }
+    
+    void LateUpdate()
+    {
+        if (isDrawingMode && rangeIndicator != null)
+        {
+            // Keep the circle centered on the player
+            rangeIndicator.transform.position = playerController.transform.position;
+        }
+    }
+    
+    void UpdateDrawingModeUI()
+    {
+        if (drawingModeIndicator != null)
+        {
+            // Update the UI sprite based on the drawing mode state
+            drawingModeIndicator.sprite = isDrawingMode ? drawingModeOnImage : drawingModeOffImage;
         }
     }
 
@@ -66,19 +124,52 @@ public class DrawShapes : MonoBehaviour
         shapeObject = new GameObject("DrawnShape");
         shapeObject.tag = "DrawnShape";
 
-        // Add LineRenderer
         currentLineRenderer = shapeObject.AddComponent<LineRenderer>();
         currentLineRenderer.positionCount = 0;
         currentLineRenderer.startWidth = 0.1f;
         currentLineRenderer.endWidth = 0.1f;
         currentLineRenderer.material = lineMaterial;
 
-        // Clear the points
         points.Clear();
+
+        drawingStartPosition = (Vector2)playerController.transform.position;
+    }
+    
+    void DrawCircle(LineRenderer lineRenderer, float radius)
+    {
+        if (lineRenderer == null)
+        {
+            Debug.LogError("LineRenderer is null.");
+            return;
+        }
+
+        int segments = 50; // Number of segments in the circle
+        lineRenderer.positionCount = segments + 1; // Extra point to close the circle
+        lineRenderer.loop = true; // Ensures the circle loops
+        lineRenderer.useWorldSpace = false; // Relative to the player
+
+        float angle = 0f;
+        for (int i = 0; i <= segments; i++)
+        {
+            float x = Mathf.Cos(Mathf.Deg2Rad * angle) * radius;
+            float y = Mathf.Sin(Mathf.Deg2Rad * angle) * radius;
+
+            lineRenderer.SetPosition(i, new Vector3(x, y, 0));
+            Debug.Log($"Circle Point {i}: ({x}, {y})");
+            angle += 360f / segments;
+        }
     }
 
     void AddPointToLine(Vector2 newPoint)
     {
+        
+        // Check if the new point is within the maximum drawing range
+        if (Vector2.Distance(drawingStartPosition, newPoint) > maxDrawingRange)
+        {
+            Debug.Log("Max drawing range reached.");
+            return; // Stop adding points if outside range
+        }
+        
         if (points.Count == 0 || Vector2.Distance(points[points.Count - 1], newPoint) > 0.1f)
         {
             if (points.Count > 1)
