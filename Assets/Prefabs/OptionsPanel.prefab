@@ -848,11 +848,12 @@ MonoBehaviour:
     Jump            Space
 
     D
-    Mode        Ctrl
+    Mode        Shift
 
     Draw            Left Click
 
-    Erase           Right Click
+    Erase           Right
+    Click
 
 
 
