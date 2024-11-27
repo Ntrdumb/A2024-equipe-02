@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Platformer.Mechanics;
 using UnityEngine;
 
@@ -39,6 +40,7 @@ public class DrawShapes : MonoBehaviour
     
     void Update()
     {
+
         // Toggle drawing mode with Shift key
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
@@ -60,7 +62,9 @@ public class DrawShapes : MonoBehaviour
             // Mouse down to start drawing
             if (Input.GetMouseButtonDown(0) && playerController.getCurrentGauge() > 0)
             {
+                //UnityEngine.Debug.Log($"Mouse Button Down - Drawing Mode: {isDrawingMode}, Gauge: {playerController.getCurrentGauge()}");
                 CreateNewLine();
+                //UnityEngine.Debug.Log("How");
                 Cursor.SetCursor(mouseDrawIcon, Vector2.zero, CursorMode.Auto);
             }
 
@@ -86,6 +90,19 @@ public class DrawShapes : MonoBehaviour
             if (points.Count > 2)
             {
                 CreateEdgeCollider();
+
+                GameObject[] drawnShapes2 = GameObject.FindGameObjectsWithTag("DrawnShape");
+                foreach (GameObject shape in drawnShapes2)
+                {
+                    LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
+                    EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
+
+
+                    if (lineRenderer != null && lineRenderer.sharedMaterial == null)
+                    {
+                        Destroy(shape);
+                    }
+                }
             }
         }
         
@@ -96,6 +113,7 @@ public class DrawShapes : MonoBehaviour
             LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
             EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
 
+            
             if (lineRenderer != null && edgeCollider != null)
             {
                 UpdateLineRendererPosition(shape, lineRenderer, edgeCollider);
@@ -124,14 +142,18 @@ public class DrawShapes : MonoBehaviour
 
     void CreateNewLine()
     {
+        //UnityEngine.Debug.Log("Creating new shape object");
         shapeObject = new GameObject("DrawnShape");
         shapeObject.tag = "DrawnShape";
+        //UnityEngine.Debug.Log($"Created object: {shapeObject.name}, Instance ID: {shapeObject.GetInstanceID()}");
 
         currentLineRenderer = shapeObject.AddComponent<LineRenderer>();
         currentLineRenderer.positionCount = 0;
         currentLineRenderer.startWidth = 0.1f;
         currentLineRenderer.endWidth = 0.1f;
-        currentLineRenderer.material = lineMaterial;
+        //currentLineRenderer.material = lineMaterial;
+        currentLineRenderer.sharedMaterial = lineMaterial;
+        //UnityEngine.Debug.Log($"Material: {currentLineRenderer.sharedMaterial}");
 
         points.Clear();
 
@@ -142,7 +164,6 @@ public class DrawShapes : MonoBehaviour
     {
         if (lineRenderer == null)
         {
-            Debug.LogError("LineRenderer is null.");
             return;
         }
 
@@ -158,7 +179,6 @@ public class DrawShapes : MonoBehaviour
             float y = Mathf.Sin(Mathf.Deg2Rad * angle) * radius;
 
             lineRenderer.SetPosition(i, new Vector3(x, y, 0));
-            Debug.Log($"Circle Point {i}: ({x}, {y})");
             angle += 360f / segments;
         }
     }
@@ -169,7 +189,6 @@ public class DrawShapes : MonoBehaviour
         float distanceFromStart = Vector2.Distance(drawingStartPosition, newPoint);
         if (distanceFromStart > maxDrawingRange)
         {
-            Debug.Log($"Attempted to draw outside max range. Distance: {distanceFromStart}, Max: {maxDrawingRange}");
             return; // Do not allow drawing outside the range
         }
 
@@ -187,8 +206,6 @@ public class DrawShapes : MonoBehaviour
             points.Add(newPoint);
             currentLineRenderer.positionCount = points.Count;
             currentLineRenderer.SetPosition(points.Count - 1, newPoint);
-
-            Debug.Log($"Added point: {newPoint}, Total points: {points.Count}");
         }
     }
 
@@ -288,7 +305,9 @@ public class DrawShapes : MonoBehaviour
             newLineRenderer.positionCount = segment.Count;
             newLineRenderer.startWidth = 0.1f;
             newLineRenderer.endWidth = 0.1f;
-            newLineRenderer.material = lineMaterial;
+            //newLineRenderer.material = lineMaterial;
+            newLineRenderer.sharedMaterial = lineMaterial;
+
 
             // Add EdgeCollider2D with points in local space
             EdgeCollider2D newEdgeCollider = newShape.AddComponent<EdgeCollider2D>();
@@ -377,6 +396,11 @@ public class DrawShapes : MonoBehaviour
                 {
                     HandleLineSplitting(shape, newSegments, rb);
                 }
+            }
+
+            if (lineRenderer != null && lineRenderer.sharedMaterial == null)
+            {
+                Destroy(shape);
             }
         }
     }
