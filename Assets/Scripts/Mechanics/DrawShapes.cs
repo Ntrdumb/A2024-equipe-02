@@ -19,13 +19,14 @@ public class DrawShapes : MonoBehaviour
     [SerializeField] Texture2D mouseDrawIcon;
     [SerializeField] Texture2D mouseEraseIcon;
     
-    [SerializeField] private float maxDrawingRange = 3.0f;
+    private float maxDrawingRange = 4.0f;
     [SerializeField] private LineRenderer rangeIndicator; 
     private Vector2 drawingStartPosition;
 
 
     void Start()
     {
+        isDrawingMode = false;
         if (rangeIndicator != null)
         {
             // Configure the circle
@@ -70,15 +71,6 @@ public class DrawShapes : MonoBehaviour
                 AddPointToLine(mousePos);
             }
 
-            // Mouse up to finish drawing
-            if (Input.GetMouseButtonUp(0))
-            {
-                if (points.Count > 2)
-                {
-                    CreateEdgeCollider();
-                }
-            }
-
             // Right-click to erase part of the shape
             if (Input.GetMouseButton(1))
             {
@@ -86,19 +78,30 @@ public class DrawShapes : MonoBehaviour
                 Cursor.SetCursor(mouseEraseIcon, Vector2.zero, CursorMode.Auto);
             }
 
-            // Update LineRenderer positions for all DrawnShape objects
-            GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
-            foreach (GameObject shape in drawnShapes)
+        }
+        
+        // Mouse up to finish drawing
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (points.Count > 2)
             {
-                LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
-                EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
-
-                if (lineRenderer != null && edgeCollider != null)
-                {
-                    UpdateLineRendererPosition(shape, lineRenderer, edgeCollider);
-                }
+                CreateEdgeCollider();
             }
         }
+        
+        // Update LineRenderer positions for all DrawnShape objects
+        GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
+        foreach (GameObject shape in drawnShapes)
+        {
+            LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
+            EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
+
+            if (lineRenderer != null && edgeCollider != null)
+            {
+                UpdateLineRendererPosition(shape, lineRenderer, edgeCollider);
+            }
+        }
+        
     }
     
     void LateUpdate()
@@ -162,24 +165,30 @@ public class DrawShapes : MonoBehaviour
 
     void AddPointToLine(Vector2 newPoint)
     {
-        
         // Check if the new point is within the maximum drawing range
-        if (Vector2.Distance(drawingStartPosition, newPoint) > maxDrawingRange)
+        float distanceFromStart = Vector2.Distance(drawingStartPosition, newPoint);
+        if (distanceFromStart > maxDrawingRange)
         {
-            Debug.Log("Max drawing range reached.");
-            return; // Stop adding points if outside range
+            Debug.Log($"Attempted to draw outside max range. Distance: {distanceFromStart}, Max: {maxDrawingRange}");
+            return; // Do not allow drawing outside the range
         }
-        
+
+        // Ensure we only add points if they are spaced apart to prevent clutter
         if (points.Count == 0 || Vector2.Distance(points[points.Count - 1], newPoint) > 0.1f)
         {
+            // Deduct gauge based on the distance between points
             if (points.Count > 1)
             {
-                playerController.DeltaGauge(-Vector2.Distance(points[points.Count - 1] * 1.005f, newPoint));
+                float distanceBetweenPoints = Vector2.Distance(points[points.Count - 1], newPoint);
+                playerController.DeltaGauge(-distanceBetweenPoints); // Reduce gauge
             }
 
+            // Add the point and update the LineRenderer
             points.Add(newPoint);
             currentLineRenderer.positionCount = points.Count;
             currentLineRenderer.SetPosition(points.Count - 1, newPoint);
+
+            Debug.Log($"Added point: {newPoint}, Total points: {points.Count}");
         }
     }
 
