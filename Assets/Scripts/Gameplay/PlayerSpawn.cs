@@ -37,6 +37,9 @@ namespace Platformer.Gameplay
             var checkpointPosition = GameManager.Instance.GetCheckpointPosition();
             player.Teleport(checkpointPosition);
 
+            // Set the gauge level to the checkpoint level
+            player.SetGaugeLevel(GameManager.Instance.GetGaugeLevel());
+
             // Reset jump state and animations
             player.jumpState = PlayerController.JumpState.Grounded;
             player.animator.SetBool("dead", false);

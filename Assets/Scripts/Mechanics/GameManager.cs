@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     private Vector3 checkpointPosition;
+    private float gaugeLevel;
     public DrawShapes drawShapes;
 
     private void Awake()
@@ -24,6 +25,16 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void SetGaugeLevel(float level)
+    {
+        gaugeLevel = level;
+    }
+
+    public float GetGaugeLevel()
+    {
+        return gaugeLevel;
     }
 
     public void SetCheckpoint(Vector3 position)

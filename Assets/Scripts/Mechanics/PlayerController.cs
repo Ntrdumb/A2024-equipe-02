@@ -178,5 +178,11 @@ namespace Platformer.Mechanics
         {
             return _currentGauge;
         }
+
+        public void SetGaugeLevel(float level)
+        {
+            _currentGauge = level;
+            UpdateGaugeUI();
+        }
     }
 }
