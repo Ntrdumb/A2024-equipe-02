@@ -198,7 +198,7 @@ public class DrawShapes : MonoBehaviour
             // Deduct gauge based on the distance between points
             if (points.Count > 1)
             {
-                float distanceBetweenPoints = Vector2.Distance(points[points.Count - 1] * 1.2f, newPoint);
+                float distanceBetweenPoints = Vector2.Distance(points[points.Count - 1] * 1.1f, newPoint);
                 playerController.DeltaGauge(-distanceBetweenPoints); // Reduce gauge
             }
 
