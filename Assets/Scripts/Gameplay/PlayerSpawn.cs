@@ -22,6 +22,8 @@ namespace Platformer.Gameplay
                 GameManager.Instance.drawShapes.ClearDrawnShapes();
             }
 
+            GameManager.Instance.setActiveRefillObjects(true);
+
             // Enable the player's collider and disable control momentarily
             player.collider2d.enabled = true;
             player.controlEnabled = false;

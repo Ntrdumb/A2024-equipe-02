@@ -161,7 +161,7 @@ namespace Platformer.Mechanics
             {
                 DeltaGauge(25f); // Refills gauge by 25 units 
                 audioSource.PlayOneShot(refillAudio);
-                Destroy(other.gameObject); // Remove the power-up after collecting it
+                other.gameObject.SetActive(false); // Remove the power-up after collecting it
             }
         }
 

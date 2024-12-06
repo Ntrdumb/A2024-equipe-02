@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private Vector3 checkpointPosition;
     private float gaugeLevel;
     public DrawShapes drawShapes;
+    private GameObject[] refillObjects;
 
     private void Awake()
     {
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
             {
                 drawShapes = GetComponent<DrawShapes>();
             }
+
+            refillObjects = GameObject.FindGameObjectsWithTag("Refill");
         }
         else
         {
@@ -45,5 +48,13 @@ public class GameManager : MonoBehaviour
     public Vector3 GetCheckpointPosition()
     {
         return checkpointPosition;
+    }
+
+    public void setActiveRefillObjects(bool active)
+    {
+        foreach (GameObject refillObject in refillObjects)
+        {
+            refillObject.SetActive(active);
+        }
     }
 }
