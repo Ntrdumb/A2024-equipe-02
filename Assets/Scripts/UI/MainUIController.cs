@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Platformer.Core;
 using Platformer.Gameplay;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 namespace Platformer.UI
@@ -37,6 +38,7 @@ namespace Platformer.UI
         public void lastCheckpoint()
         {
             Simulation.Schedule<PlayerDeath>();
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 }
