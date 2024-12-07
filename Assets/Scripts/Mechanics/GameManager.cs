@@ -22,12 +22,33 @@ public class GameManager : MonoBehaviour
                 drawShapes = GetComponent<DrawShapes>();
             }
 
-            refillObjects = GameObject.FindGameObjectsWithTag("Refill");
+            InitializeRefillObjects();
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+    {
+        // Reinitialize the refillObjects array when the scene is reloaded
+        InitializeRefillObjects();
+    }
+
+    private void InitializeRefillObjects()
+    {
+        refillObjects = GameObject.FindGameObjectsWithTag("Refill");
     }
 
     public void SetGaugeLevel(float level)
@@ -54,7 +75,10 @@ public class GameManager : MonoBehaviour
     {
         foreach (GameObject refillObject in refillObjects)
         {
-            refillObject.SetActive(active);
+            if (refillObject != null) 
+            {
+                refillObject.SetActive(active);
+            }
         }
     }
 }

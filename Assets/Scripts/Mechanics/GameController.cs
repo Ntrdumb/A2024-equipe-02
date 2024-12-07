@@ -1,5 +1,6 @@
 using Platformer.Core;
 using Platformer.Model;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 namespace Platformer.Mechanics
@@ -22,17 +23,46 @@ namespace Platformer.Mechanics
 
         void OnEnable()
         {
-            Instance = this;
+            if (Instance == null)
+            {
+                Instance = this;
+                SceneManager.sceneLoaded += OnSceneLoaded;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
         void OnDisable()
         {
-            if (Instance == this) Instance = null;
+            if (Instance == this)
+            {
+                Instance = null;
+                SceneManager.sceneLoaded -= OnSceneLoaded;
+            }
         }
 
         void Update()
         {
             if (Instance == this) Simulation.Tick();
+        }
+
+        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            // Reinitialize the model references
+            model.virtualCamera = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
+            model.player = FindObjectOfType<PlayerController>();
+            GameObject spawnPointObj = GameObject.Find("SpawnPoint");
+            if (spawnPointObj != null)
+            {
+                model.spawnPoint = spawnPointObj.transform;
+            }
+            else
+            {
+                UnityEngine.Debug.LogError("SpawnPoint GameObject not found");
+            }
+
         }
     }
 }
