@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d55b7138-f0b5-473e-832e-f699983f18e8" name="Changes" comment="" />
+    <list default="true" id="d55b7138-f0b5-473e-832e-f699983f18e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.log725/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.log725/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mod Assets/Custom Materials/Additive Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mod Assets/Custom Materials/Additive Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mechanics/DrawShapes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mechanics/DrawShapes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,8 +27,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/02/3c5a28d4/InvokableCall`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/93/bd8475c6/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/InitializePlayerPrefs.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/guidl/Documents/GitHub/log725/Assets/Scripts/Mechanics/DrawShapes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/guidl/Documents/GitHub/log725/Assets/Scripts/Mechanics/DrawShapes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Shaders/Particles/ParticlesUnlit.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
@@ -111,6 +118,7 @@
       <workItem from="1733185789169" duration="625000" />
       <workItem from="1733272093297" duration="275000" />
       <workItem from="1733537598485" duration="1000" />
+      <workItem from="1733638656926" duration="3497000" />
     </task>
     <servers />
   </component>

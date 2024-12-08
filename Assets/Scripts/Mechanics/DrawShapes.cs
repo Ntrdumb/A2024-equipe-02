@@ -24,7 +24,7 @@ public class DrawShapes : MonoBehaviour
     [SerializeField] private LineRenderer rangeIndicator; 
     private Vector2 drawingStartPosition;
 
-
+    
     void Start()
     {
         isDrawingMode = false;

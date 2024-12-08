@@ -58848,6 +58848,11 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: 1a2f58da46da5324ebe21556d538e35c, type: 3}
     - target: {fileID: 7275671782717146686, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
+      propertyPath: circleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 896164d662320274b8db2230e2e691a3, type: 2}
+    - target: {fileID: 7275671782717146686, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
       propertyPath: mouseEraseIcon
       value: 
       objectReference: {fileID: 2800000, guid: 9eff29f6a1c08ec4281fe00296215fa1, type: 3}
@@ -63494,6 +63499,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 69643917370001080, guid: 84d7421099945be4b895a1824790f3bc,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 69643917370001080, guid: 84d7421099945be4b895a1824790f3bc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 896164d662320274b8db2230e2e691a3, type: 2}
+    - target: {fileID: 69643917370001080, guid: 84d7421099945be4b895a1824790f3bc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc1a651902a6c5144b789872dedc1c12, type: 2}
+    - target: {fileID: 69643917370001080, guid: 84d7421099945be4b895a1824790f3bc,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 69643917370001080, guid: 84d7421099945be4b895a1824790f3bc,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.39058065
+      objectReference: {fileID: 0}
+    - target: {fileID: 69643917370001080, guid: 84d7421099945be4b895a1824790f3bc,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69643917370001080, guid: 84d7421099945be4b895a1824790f3bc,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3778985856649979373, guid: 84d7421099945be4b895a1824790f3bc,
         type: 3}
       propertyPath: m_Name
