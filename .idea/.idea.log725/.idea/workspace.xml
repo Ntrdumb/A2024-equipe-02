@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d55b7138-f0b5-473e-832e-f699983f18e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.log725/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.log725/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mod Assets/Custom Materials/Additive Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mod Assets/Custom Materials/Additive Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mechanics/DrawShapes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mechanics/DrawShapes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,7 @@
       <workItem from="1733185789169" duration="625000" />
       <workItem from="1733272093297" duration="275000" />
       <workItem from="1733537598485" duration="1000" />
-      <workItem from="1733638656926" duration="3497000" />
+      <workItem from="1733638656926" duration="4195000" />
     </task>
     <servers />
   </component>

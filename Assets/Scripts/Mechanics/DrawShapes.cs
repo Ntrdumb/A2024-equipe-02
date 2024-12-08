@@ -191,6 +191,14 @@ public class DrawShapes : MonoBehaviour
         {
             return; // Do not allow drawing outside the range
         }
+        
+        // Check if the new point overlaps with any colliders tagged as "level"
+        Collider2D hit = Physics2D.OverlapPoint(newPoint);
+        if (hit != null && hit.CompareTag("level"))
+        {
+            UnityEngine.Debug.Log("Cannot draw on level objects.");
+            return; // Stop adding points if overlapping with level objects
+        }
 
         // Ensure we only add points if they are spaced apart to prevent clutter
         if (points.Count == 0 || Vector2.Distance(points[points.Count - 1], newPoint) > 0.1f)
