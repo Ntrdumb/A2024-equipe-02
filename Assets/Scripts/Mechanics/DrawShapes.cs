@@ -81,30 +81,30 @@ public class DrawShapes : MonoBehaviour
                 ErasePartOfShape();
                 Cursor.SetCursor(mouseEraseIcon, Vector2.zero, CursorMode.Auto);
             }
-
-        }
-        
-        // Mouse up to finish drawing
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (points.Count > 2)
+            // Mouse up to finish drawing
+            if (Input.GetMouseButtonUp(0))
             {
-                CreateEdgeCollider();
-
-                GameObject[] drawnShapes2 = GameObject.FindGameObjectsWithTag("DrawnShape");
-                foreach (GameObject shape in drawnShapes2)
+                if (points.Count > 2)
                 {
-                    LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
-                    EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
+                    CreateEdgeCollider();
 
-
-                    if (lineRenderer != null && lineRenderer.sharedMaterial == null)
+                    GameObject[] drawnShapes2 = GameObject.FindGameObjectsWithTag("DrawnShape");
+                    foreach (GameObject shape in drawnShapes2)
                     {
-                        Destroy(shape);
+                        LineRenderer lineRenderer = shape.GetComponent<LineRenderer>();
+                        EdgeCollider2D edgeCollider = shape.GetComponent<EdgeCollider2D>();
+
+
+                        if (lineRenderer != null && lineRenderer.sharedMaterial == null)
+                        {
+                            Destroy(shape);
+                        }
                     }
                 }
             }
         }
+        
+
         
         // Update LineRenderer positions for all DrawnShape objects
         GameObject[] drawnShapes = GameObject.FindGameObjectsWithTag("DrawnShape");
